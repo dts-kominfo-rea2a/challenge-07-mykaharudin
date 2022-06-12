@@ -1,6 +1,7 @@
 const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
+const promiseOutput = null;
 const promiseOutput = async (emosi)=>{
   const ptIix = await promiseTheaterIXX();
   const ptVgc = await promiseTheaterVGC();
