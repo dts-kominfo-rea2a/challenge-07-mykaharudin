@@ -1,7 +1,7 @@
 const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
-const promiseOutput = null;
+
 const promiseOutput = async (emosi)=>{
   const ptIix = await promiseTheaterIXX();
   const ptVgc = await promiseTheaterVGC();
@@ -20,15 +20,15 @@ const promiseOutput = async (emosi)=>{
 
         hasil = iixMarah + vgcMarah;
       }else if(emosi == "tidak marah"){
-        iixTidakmarah = ptIix.filter((elemet)=>element.hasil == "tidak marah");
-        vgcTidakmarah = ptVgc.filter((elemetn)=>element.hasil == "tidak marah");
+        iixTidakmarah = ptIix.filter((element)=>element.hasil == "tidak marah");
+        vgcTidakmarah = ptVgc.filter((element)=>element.hasil == "tidak marah");
         hasil = iixTidakmarah + vgcTidakmarah;
       }
 
       return res(hasil);
     }
   )
-}
+};
 
 module.exports = {
   promiseOutput,
